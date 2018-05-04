@@ -51,7 +51,6 @@ public class JogoDaForcaSwing {
 		Runnable runnable = new Runnable() {
 			@Override
 			public void run() {
-			audio.player("back");
 			}
 		};
 		thread = new Thread(runnable);// cria uma nova Thread
@@ -97,7 +96,6 @@ public class JogoDaForcaSwing {
 
 					if(Game.guess(kick)) {
 						
-						audio.stop();
 						audio.player("win");
 						for(int i=0; i<26; i++) {
 							keyboard[i].setEnabled(false);
@@ -115,7 +113,6 @@ public class JogoDaForcaSwing {
 						lblResult.setText("Você venceu!");
 
 					}else {
-						audio.stop();
 						audio.player("lose");
 						for(int i=0; i<26; i++) {
 							keyboard[i].setEnabled(false);
