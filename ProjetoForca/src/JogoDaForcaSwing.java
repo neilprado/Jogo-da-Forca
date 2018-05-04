@@ -1,3 +1,8 @@
+/* IFPB - Sistemas para Internet
+ * Projeto de POO - Jogo da Forca Mario
+ * Alunos: Neil John Ávila Prado Júnior - 20171370045
+ * 		   Pedro Henrique de Sales Xavier - 20161370021 */
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -51,6 +56,7 @@ public class JogoDaForcaSwing {
 		Runnable runnable = new Runnable() {
 			@Override
 			public void run() {
+				audio.player("back");
 			}
 		};
 		thread = new Thread(runnable);// cria uma nova Thread
@@ -95,7 +101,7 @@ public class JogoDaForcaSwing {
 					word_split = word_game.split("");
 
 					if(Game.guess(kick)) {
-						
+						audio.stop();
 						audio.player("win");
 						for(int i=0; i<26; i++) {
 							keyboard[i].setEnabled(false);
@@ -113,6 +119,7 @@ public class JogoDaForcaSwing {
 						lblResult.setText("Você venceu!");
 
 					}else {
+						audio.stop();
 						audio.player("lose");
 						for(int i=0; i<26; i++) {
 							keyboard[i].setEnabled(false);
@@ -270,7 +277,6 @@ public class JogoDaForcaSwing {
 					int[] indexes = Game.play(letter);
 
 					if(indexes!=null) {
-						audio.player("letter");
 						for(int i=0; i<indexes.length; i++) {
 							btnWord[indexes[i]].setIcon(new ImageIcon(JogoDaForcaSwing.class.getResource("/imagem/tp2.jpg")));
 							btnWord[indexes[i]].setText(letter);
@@ -278,7 +284,6 @@ public class JogoDaForcaSwing {
 							lblHits.setText("Acertos: " + Game.getHits());
 						}
 					}else {
-						audio.player("wrong");
 						btnActual.setEnabled(false);
 						lblMistakes.setText("Erros: " + Game.getMistakes());
 					}

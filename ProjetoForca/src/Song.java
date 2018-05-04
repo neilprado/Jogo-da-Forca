@@ -1,3 +1,8 @@
+/* IFPB - Sistemas para Internet
+ * Projeto de POO - Jogo da Forca Mario
+ * Alunos: Neil John Ávila Prado Júnior - 20171370045
+ * 		   Pedro Henrique de Sales Xavier - 20161370021 */
+
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
