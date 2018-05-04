@@ -1,0 +1,9 @@
+8
+MAGNETO;interpretado por Ian McKellen
+NOTURNO;pode se teleportar
+BATMAN;tem medo de morcegos
+FREDDY;pode entrar nos sonhos dos outros
+YODA;"judge by my size do you?"
+GANDALF;"um mago nunca se atrasa"
+CORINGA;"why so serious?"
+GOLLUM;"my precious"
